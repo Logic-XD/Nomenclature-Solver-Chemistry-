@@ -1,5 +1,5 @@
 cations = [["Li", "lithium", 1, 1], ["Be", "berylium", 1, 2],
-["Na", "lithium", 1, 1], ["Mg", "magnesium", 1, 2], 
+["Na", "sodium", 1, 1], ["Mg", "magnesium", 1, 2], 
 ["K", "potassium", 1, 1], ["Ca", "calcium", 1, 2], 
 ["Rb", "rubidium", 1, 1], ["Sr", "strontium", 1, 2], 
 ["Cs", "cesium", 1, 1], ["Ba", "barium", 1, 2], 
@@ -36,9 +36,9 @@ if(query == "1"):
     element1 = formula[0]
     if(formula[1].isnumeric() == False):
         element1 += formula[1]
-    if(element1 not in cations):
-        print("Please enter an ionic compound!")
-        quit()
+    #if(element1 not in cations):
+    #    print("Please enter an ionic compound!")
+    #    quit()
     for i in range(len(cations)):
         if(cations[i][0] == element1):
             idx1 = i; break
@@ -63,9 +63,9 @@ if(query == "1"):
         element2 = element2[:-1]
     else:
         subscript2 = 1
-    if(element2 not in anions):
-        print("Please enter an ionic compound!")
-        quit()
+    #if(element2 not in anions):
+    #    print("Please enter an ionic compound!")
+    #    quit()
     for i in range(len(anions)):
         if(anions[i][0] == element2):
             idx2 = i; break
@@ -129,3 +129,4 @@ elif(query == "2"):
     
 else:
     print("Please enter 1 or 2.")
+
